@@ -39,7 +39,9 @@ to use scanf and printf.
 Input Format
 
 Input consists of the following space-separated values: int, long, char, float,
-and double, respectively.
+and double, respectively. line in the same order it was received as input.
+Note that the floating point value should be correct up to 3 decimal places and
+the double to 9 decimal places.
 
 Output Format
 
@@ -61,7 +63,7 @@ a
 */
 
 // Code starts from here : 
-
+/*
 #include <cstdio>
 #include <iostream>
 using namespace std;
@@ -71,7 +73,41 @@ int main() {
   char ch;
   float floatingNumber;
   double decimal;
-  scanf("%d %ld %c %f %lf", integer, longNumber, ch, floatingNumber, decimal);
-  printf("%d %ld %c %f %lf", integer, longNumber, ch, floatingNumber, decimal);
+  scanf("%d %ld %c %f %lf", &integer, &longNumber, &ch, &floatingNumber, &decimal);
+  printf("%d %ld %c %f %lf", integer , longNumber, ch, floatingNumber, decimal);
+  // printf("%d" , integer);
+  // printf("%ld" , longNumber);
+  // printf("%c" , ch);
+  // printf("%f" , floatingNumber);
+  // printf("%lf" , decimal);
   return 0;
+}
+*/
+
+
+// Second Approach
+
+#include <iostream>
+#include <cstdio>
+
+int main() {
+    int intValue;
+    long longValue;
+    char charValue;
+    float floatValue;
+    double doubleValue;
+
+    // Read input values
+    std::scanf("%d %ld %c %f %lf", &intValue, &longValue, &charValue, &floatValue, &doubleValue);
+
+    // Print values with appropriate decimal precision
+    std::cout << intValue << std::endl;
+    std::cout << longValue << std::endl;
+    std::cout << charValue << std::endl;
+    std::cout.precision(3);
+    std::cout << std::fixed << floatValue << std::endl;
+    std::cout.precision(9);
+    std::cout << std::fixed << doubleValue << std::endl;
+
+    return 0;
 }
