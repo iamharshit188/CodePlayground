@@ -3,13 +3,15 @@
 #include <iostream>
 #include <ostream>
 using namespace std;
-int main() {
+int main()
+{
   int number;
-  for (number = 0; number < 100; number++) {
-    if (number%3==0)
+  for (number = 0; number < 100; number++)
+  {
+    if (number % 3 == 0)
     {
-        continue;
+      continue;
     }
-    cout<<number<<endl;
+    cout << number << endl;
   }
 }
