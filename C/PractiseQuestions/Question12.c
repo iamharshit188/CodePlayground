@@ -24,54 +24,29 @@
 // }
 
 #include <stdio.h>
-#include <math.h>
-
-int isArmstrongNumber(int number);
-
 int main()
 {
-    int number;
+    int num, originalNum, remainder, result = 0;
+    printf("Enter a three-digit integer: ");
+    scanf("%d", &num);
+    originalNum = num;
 
-    printf("Enter a number: ");
-    scanf("%d", &number);
-
-    if (isArmstrongNumber(number))
+    while (originalNum != 0)
     {
-        printf("%d is an Armstrong number.\n", number);
+        // remainder contains the last digit
+        remainder = originalNum % 10;
+
+        result += remainder * remainder * remainder;
+
+        // removing last digit from the orignal number
+        originalNum /= 10;
     }
+
+    if (result == num)
+        printf("%d is an Armstrong number.", num);
     else
-    {
-        printf("%d is not an Armstrong number.\n", number);
-    }
+        printf("%d is not an Armstrong number.", num);
 
     return 0;
 }
-
-int isArmstrongNumber(int number)
-{
-    int originalNumber, remainder, result = 0, n = 0;
-    originalNumber = number;
-    // Count the number of digits
-    while (originalNumber != 0)
-    {
-        originalNumber /= 10;
-        ++n;
-    }
-    originalNumber = number;
-    // Calculate the sum of each digit raised to the power of the number of digits
-    while (originalNumber != 0)
-    {
-        remainder = originalNumber % 10;
-        result += pow(remainder, n);
-        originalNumber /= 10;
-    }
-    // Check if the result is equal to the original number
-    if (result == number)
-    {
-        return 1; // It is an Armstrong number
-    }
-    else
-    {
-        return 0; // It is not an Armstrong number
-    }
-}
+// Taken from Programmiz : https://www.programiz.com/c-programming/examples/check-armstrong-number
