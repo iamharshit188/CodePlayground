@@ -6,4 +6,12 @@ int main()
     {
         printf("%d \n", counter);
     }
+    for (char counter1 = 'a'; counter1 <= 'z'; counter1++)
+    {
+        printf("%c \n", counter1);
+    }
+    for (float counter2 = 1.0; counter2 <= 10.0; counter2++)
+    {
+        printf("%f \n", counter2);
+    }
 }
