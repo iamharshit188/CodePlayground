@@ -4,6 +4,6 @@ int main()
 {
     for (int counter = 0; counter <= 100; counter++)
     {
-        printf("%d \n" , counter);
+        printf("%d \n", counter);
     }
-} 
+}
