@@ -8,7 +8,7 @@ int main()
     for (int counter = 1; counter <= 10; counter++)
     {
         int temp = 0;
-        temp = number * counter ;
-        
+        temp = number * counter;
+        printf("%d \n", temp);
     }
 }
