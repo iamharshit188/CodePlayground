@@ -1,5 +1,4 @@
-// Write a program to print all the numbers divisible by 2 and skip the ones
-// which are divisible by 2;
+// Write a program to print all the numbers divisible by 2 and skip the ones which are divisible by 2;
 #include <iostream>
 #include <ostream>
 using namespace std;
