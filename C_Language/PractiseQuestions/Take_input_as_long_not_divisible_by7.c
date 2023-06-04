@@ -1,4 +1,4 @@
-//Take input from user as long user enters a number which is not divisible of 7
+// Take input from user as long user enters a number which is not divisible of 7
 #include <stdio.h>
 int main()
 {
